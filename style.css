@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Segoe+UI:wght@400;600;700&display=swap');
+
+:root {
+    --dark: #293845;
+    --accent: #5bc0de;
+    --text: #333;
+}
+
+body {
+    font-family: 'Gill sans', 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('obmc Bg(extended).png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.login-card {
+    display: flex;
+    width: 1200px;
+    max-width: 95%;
+    height: 650px;
+    border-radius: 30px;
+    background: white;
+    transform: translateY(-60px);
+    margin-top: 40px;
+    overflow: hidden; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.368);
+}
+
+.login-left {
+    width: 30%;
+    background: var(--dark);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+    gap: 15px;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.2);
+}
+
+.login-logo {
+    width: 130px;
+    border-radius: 50%;
+}
+
+.login-left h2 {
+    font-size: 2.2em;
+    margin: 0 0;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+.login-left p {
+    font-size: 0.85em;
+    color: #bbb;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.input-group {
+    width: 100%;
+}
+.input-group label {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.input-group input {
+    width: 93%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 5px;
+    background: #e6e6e6;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.login-btn {
+    background: white;
+    color: #293845;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-top: 50px;
+    font-size: 1em;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+    transition: 0.25s ease;
+    transform: translateY( -55px);
+    font-family: 'Georgia', serif;
+
+}
+.login-btn:active {
+    transform: translateY(-52px);
+}
+.login-btn:hover {
+    background: #f1f1f1c8;
+}
+.login-right {
+    width: 62%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.login-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('Login page.webp') no-repeat center;
+    background-size: cover;
+    filter: blur(4px);
+    transform: scale(1.05);
+    z-index: 0;
+}
+
+.login-right::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.welcome-text {
+    position: relative;
+    z-index: 2;
+    width: 420px;
+    color: white;
+    padding: 40px;
+}
+.welcome-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    font-family: 'Georgia', serif;
+}
+.welcome-text p,
+.welcome-text small {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    font-family: 'Georgia', serif;
+}
+.sidebar {
+    width: 280px; 
+    background: var(--dark);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    position: fixed;
+    height: 100%;
+}
+.sidebar-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    margin-bottom: 30px
+}
+
+.sidebar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sidebar ul { 
+    list-style: none; 
+    padding: 0; 
+    width: 100%; 
+    margin: 0; 
+}
+.sidebar ul li { 
+    width: 100%; 
+    padding: 5px 15px; 
+    box-sizing: border-box; 
+}
+.sidebar ul li a { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    padding: 15px 20px; 
+    color: #cfd8dc; 
+    text-decoration: none; 
+    font-size: 1.2em;  
+    font-weight: 600; 
+    transition: all 0.2s ease; 
+    border-radius: 12px; 
+}
+.sidebar ul li a.active { 
+    background: rgba(255, 255, 255, 0.12); 
+    color: white; 
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05), 0 4px 15px rgba(0, 0, 0, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+.sidebar a:hover {
+    background: rgba(255,255,255,0.1); 
+}
+.sidebar-icon { 
+    width: 24px; 
+    height: 24px; 
+}
+
+.logout-container { 
+    margin-top: auto; 
+    width: 100%; 
+    padding: 0 30px; 
+    box-sizing: border-box; 
+    margin-bottom: 50px; 
+}
+.logout-btn { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background: white; 
+    color: var(--dark); 
+    text-decoration: none; 
+    padding: 12px; 
+    border-radius: 20px; 
+    font-weight: bold; 
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.logout-btn:hover{
+    background:#f1f1f1c8 !important;
+}
+.logout-btn:active {
+    transform: translateY(4px);
+}
+.logout-btn img { 
+    width: 22px; 
+    margin-right: 10px; 
+    filter: invert(1); 
+}
+.content { 
+    margin-left: 280px;  
+    padding: 40px; 
+    flex: 1; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+}
+header { 
+    background: var(--dark); 
+    color: white; 
+    padding: 20px 35px; 
+    border-radius: 15px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 30px; 
+}
+header h1 { 
+    margin: 0; 
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.4em; 
+}
+header span { 
+    font-weight: 600; 
+    font-size: 1em; }
+
+.white-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.133);
+    min-height: 600px; 
+    width: 50%;
+    margin: 0, auto;
+    align-self: center;
+}
+
+.white-card h2 {
+    font-family: 'Gill sans', 'Georgia', serif;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.sub-label {
+    color: #666;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.quarter-content b {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+.quarter-content ul {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.quarter-content li {
+    margin-bottom: 5px;
+    color: #444;
+}     
+
+.login-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 15px 0 25px 0;
+    font-size: 1rem;
+    font-family: 'Georgia', sans-serif;
+}
+.login-footer p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.login-footer small {
+    margin: 0;
+    display: block;
+    line-height: 1.2;
+    opacity: 0.8;
+}
+.login-footer {
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-footer {
+    width: 100%;
+    color: Black;
+    text-align: center;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    margin-top: 80px; 
+    margin-bottom: 0;
+}
+.main-footer small {
+    margin: 0;
+    display: block;
+    line-height: 1.2;
+    opacity: 0.8;
+}
+
+.main-footer {
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-footer p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.image-container { 
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
+    border-radius: 14px; 
+    overflow: hidden; 
+    background: #f9f9f9;
+}
+
+.image-container img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    display: block;
+}
+
+.welcome-text { 
+    padding: 40px; 
+    color: white;
+    width: 80%;
+    text-align: center;
+}
